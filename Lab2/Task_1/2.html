@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Facebook Login Page</title>
+     <link rel="stylesheet" href="style.css">
+     <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #F0F2F5;
+        }   
+        .parent-box{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 80%;
+            margin: 0 auto;
+            height: 100vh;
+        }
+        .logo-box{
+            width: 500px;
+        }
+        .logo-box img{
+            width: 235px;
+            margin-bottom: 15px;
+        }
+        .logo-box p{
+            font-size: 26px;
+            font-weight: normal;
+        }
+
+        .form-box{
+            width: 500px;
+            padding: 30px 20px;
+            text-align: center;
+            border-radius: 5px;
+            background-color: white;
+            box-shadow: 0px 2px 10px 1px rgba(72, 72, 72, 0.198);
+        }
+        form, a{
+            background-color: white;
+        }
+        input[type='email'], input[type='password']{
+            display: block;
+            background-color: white;
+            margin: 20px auto;
+            border: 1.5px solid rgb(200, 200, 200);
+            width: 400px;
+            padding: 15px 20px;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+        .login-btn{
+            border: none;
+            background-color: #1877F2;
+            width: 400px;
+            display: block;
+            margin: 0 auto;
+            padding: 15px 20px;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: large;
+        }
+        .forgot-pass{
+            text-decoration: none;
+            width: 400px;
+            display: block;
+            margin: 0 auto 10px auto;
+            padding: 15px 0;
+            color: #1877F2;
+        }
+        hr{
+            border-top: 1px solid rgba(128, 128, 128, 0.614);
+        }
+        .create-new-acc{
+            text-decoration: none;
+            background-color: #42B72A;
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            color: white;
+            padding: 15px 0;
+            border-radius: 5px;
+        }
+     </style>
+</head>
+<body>
+     
+     <div class="parent-box">
+
+          <div class="logo-box">
+               <img src="images/fb-logo.png" alt="Facebook Logo">
+               <p> Facebook помогает вам всегда оставаться на связи и общаться со своими знакомыми. </p>
+          </div>
+
+          <div class="form-box">
+               <form>
+                    <input type="email" name="" id="" placeholder="Электронный адрес или номер телефона" readonly>
+                    <input type="password" name="" id="" placeholder="Пароль" readonly>
+                    <button class="login-btn" disabled> Вход </button>
+                    <a href="#" class="forgot-pass"> Забыли пароль? </a>
+                    <hr>
+                    <a href="#" class="create-new-acc"> Создать аккаунт </a>
+               </form>
+          </div>
+
+     </div>
+
+</body>
+</html>

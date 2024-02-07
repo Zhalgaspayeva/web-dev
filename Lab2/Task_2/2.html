@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Instagram Login Page</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+            list-style: none;
+            text-decoration: none;
+            font-family: 'Roboto', sans-serif;
+        }
+        .right{
+            margin-right: 360px;
+        }
+        .left{
+            margin-left: 360px;
+        }
+
+        body {
+            background: #fafafa;
+            font-size: 14px;
+        }
+
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .wrapper .left {
+            width: 50%;
+            text-align: center;
+            margin-right: 20px; /* Added margin */
+        }
+
+        .wrapper .left img {
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .wrapper .right {
+            width: 50%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .right .header {
+            max-width: 350px;
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .right .header .top,
+        .right .signup {
+            background: #fff;
+            border: 1px solid #e6e6e6;
+            border-radius: 1px;
+            padding: 40px 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+
+        .right .header .logo img {
+            display: block;
+            margin: 0 auto 35px;
+        }
+
+        .right .header .form .input_field {
+            margin-bottom: 5px;
+        }
+
+        .right .header .form .input_field .input {
+            width: 100%;
+            background: #fafafa;
+            border: 1px solid #efefef;
+            font-size: 12px;
+            border-radius: 3px;
+            color: #262626;
+            padding: 10px;
+        }
+
+        .right .header .form .input_field .input:focus {
+            border: 1px solid #b2b2b2;
+        }
+
+        .right .header .form .btn {
+            margin: 10px 0;
+            background-color: #3897f0;
+            border: 1px solid #3897f0;
+            border-radius: 4px;
+            text-align: center;
+            padding: 5px;
+        }
+
+        .right .header .form .btn a {
+            color: #fff;
+            display: block;
+        }
+
+        .right .header .or {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 15px;
+            margin: 15px 0 20px;
+        }
+
+        .right .header .or .line {
+            width: 105px;
+            height: 2px;
+            background: #efefef
+        }
+
+        .right .header .or p {
+            color: #999;
+            font-size: 12px;
+        }
+
+        .right .dif .fb {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .right .dif .fb img {
+            width: 16px;
+            height: 16px;
+        }
+
+        .right .dif .fb p {
+            color: #385185;
+            font-weight: 500;
+            margin-left: 10px;
+        }
+
+        .right .dif .forgot {
+            font-size: 12px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .right .dif .forgot a {
+            color: #003569;
+        }
+
+        .right .signup {
+            margin: 10px 0 20px;
+            padding: 25px 40px;
+            text-align: center;
+            color: #262626;
+        }
+
+        .right .signup a {
+            color: #3897f0;
+        }
+
+        .right .apps {
+            text-align: center;
+            color: #262626;
+        }
+
+        .right .apps p {
+            margin-bottom: 20px;
+        }
+
+        .right .apps a img {
+            width: 135px;
+            height: 40px;
+            margin: 0 5px;
+        }
+
+        .footer {
+            max-width: 935px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 40px 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .footer .links ul li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .footer .links ul li a {
+            color: #003569;
+            font-size: 12px;
+        }
+
+        .footer .copyright {
+            color: #999;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="left">
+            <img src="https://www.instagram.com/images/instagram/xig/homepage/screenshots/screenshot2-2x.png?__d=www"
+                alt="Instagram Screenshot" height="580">
+        </div>
+        <div class="right">
+            <div class="header">
+                <div class="top">
+                    <div class="logo">
+                        <img src="instagram.png" alt="instagram" style="width: 175px;">
+                    </div>
+                    <div class="form">
+                        <div class="input_field">
+                            <input type="text" placeholder="Номер телефона, имя пользователя, электронная почта"
+                                class="input" readonly>
+                        </div>
+                        <div class="input_field">
+                            <input type="password" placeholder="Пароль" class="input" readonly>
+                        </div>
+                        <div class="btn"><a href="#">Войти</a></div>
+                    </div>
+                    <div class="or">
+                        <div class="line"></div>
+                        <p>ИЛИ</p>
+                        <div class="line"></div>
+                    </div>
+                    <div class="dif">
+                        <div class="fb">
+                            <img src="facebook.png" alt="facebook">
+                            <p>Войти через Facebook</p>
+                        </div>
+                        <div class="forgot">
+                            <a href="#">Забыли пароль?</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="signup">
+                    <p>У вас еще нет аккаунта? <a href="#">Зарегистрироваться</a></p>
+                </div>
+                <div class="apps">
+                    <p>Установите приложение.</p>
+                    <div class="icons">
+                        <a href="#"><img src="appstore.png" alt="appstore"></a>
+                        <a href="#"><img src="googleplay.png" alt="googleplay"></a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+<div class="footer">
+                <div class="links">
+                    <ul>
+                        <li><a href="#">ПРО НАС</a></li>
+                        <li><a href="#">ПОДДЕРЖКА</a></li>
+                    </ul>
+                </div>
+                <div class="copyright">
+                    © 2024 INSTAGRAM
+                </div>
+            </div>
+</body>
+
+</html>
