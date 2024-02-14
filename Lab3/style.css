@@ -1,0 +1,127 @@
+*,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background: white
+}
+.container{
+    width: 40%;
+    min-width: 950px;
+    position: absolute;
+    margin: 50px auto 0;
+    left: 0;
+    right: 0;
+    top: 30px;
+    padding: 30px 40px;
+    font-size: medium;
+    font-weight: lighter;
+}
+#newtask{
+    position:static;
+    background-color: #ffffff;
+    padding: 30px 20px;
+    border-radius: 5px;
+
+}
+#newtask input{
+    width: 70%;
+    width: 70%;
+    height: 45px;
+    font-family:sans-serif;
+    font-size: 15px;
+    border: 1px solid #d1d3d4;
+    padding: 12px;
+    color: #111111;
+    font-weight: 500;
+    position:static;
+    border-radius: 5px;
+    
+}
+#newtask input:focus{
+    outline: none;
+    border-color: #000000;
+}
+
+#newtask button{
+    position: static;
+    float: right;
+    width: 100px;
+    height: 45px;
+    font-family:sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    background-color: #256ec1;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    outline: none;
+    border-radius: 5px;
+}
+#tasks{
+    background-color: #ffffff;
+    padding: 30px 20px;
+    margin-top: 60px;
+    border-radius: 10px;
+    width: 100%;
+    position: static;
+}
+.task{
+    border: 1px solid #d1d3d4;
+    height: 50px;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #d1d3d4;
+    cursor: pointer;
+}
+.task span{
+    font-family:sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+.task button{
+    background-color:#cb0000;
+    color: #ffffff;
+    height: 100%;
+    width: 40px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+.completed{
+    text-decoration: line-through;
+}
+nav{
+    width: 70%;
+    margin: 0 auto;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+header{
+    color: rgb(65, 65, 65);
+    background: #1b1b1c;
+    font-family:sans-serif;
+}
+p{
+  padding-left: 7%;
+  margin-right: 70%;
+  font-weight: lighter;
+  font-family:sans-serif;
+  font-size:xx-large;
+}
+.logo {
+  margin-right: 800px; /* Уменьшаем правый отступ */
+  margin-left: 0; /* Устанавливаем левый отступ на ноль, чтобы предотвратить влияние margin-right */
+  font-weight: lighter;
+  color: rgb(114, 114, 114);
+  padding-left: 0; /* Убираем левый внутренний отступ */
+  padding-right: 0; /* Убираем правый внутренний отступ */
+}
