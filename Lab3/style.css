@@ -118,10 +118,10 @@ p{
   font-size:xx-large;
 }
 .logo {
-  margin-right: 800px; /* Уменьшаем правый отступ */
-  margin-left: 0; /* Устанавливаем левый отступ на ноль, чтобы предотвратить влияние margin-right */
+  margin-right: 800px;
+  margin-left: 0;
   font-weight: lighter;
   color: rgb(114, 114, 114);
-  padding-left: 0; /* Убираем левый внутренний отступ */
-  padding-right: 0; /* Убираем правый внутренний отступ */
+  padding-left: 0; 
+  padding-right: 0; 
 }
