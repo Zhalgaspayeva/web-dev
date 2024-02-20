@@ -70,10 +70,7 @@ label {
   display: block;
   text-transform: uppercase;
 }
-img {
-  width: 160px;
-  height: 210px;
-}
+
 .rating {
   color: red;
   font-size: 20px;
@@ -145,6 +142,28 @@ app-top-bar h1 {
   border-radius: 2px;
   background-color: #EEEEEE;
 }
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gallery img {
+  width: 70px;
+  height: 90px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.gallery img.active {
+  border: 2px solid red;
+}
+
+.current-image {
+  width: 160px;
+  height: 200px;
+  margin-top: 10px;
+}
+
 
 
 /*

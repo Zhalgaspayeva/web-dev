@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { Product } from '../products';
 import { products } from '../products';
 
 @Component({
@@ -10,7 +10,9 @@ import { products } from '../products';
 export class ProductListComponent {
 
   products = [...products];
-
+  setCurrentImage(product: Product, imageUrl: string): void {
+    product.currentImage = imageUrl;
+  }
   shareOnWhatsApp(link: string): void {
     const encodedLink = encodeURIComponent(link);
     window.open(`https://wa.me/?text=${encodedLink}`, '_blank');
@@ -24,6 +26,7 @@ export class ProductListComponent {
   onNotify() {
     window.alert('You will be notified when the product goes on sale');
   }
+
 }
 
 
