@@ -1,0 +1,69 @@
+<div class="container">
+  <div>
+    <button (click)="toggleCategories()" style="font-size: 20px">Выберите категорию</button>
+    <div *ngIf="showCategories">
+      <h2>Категории</h2>
+      <ul>
+        <li *ngFor="let category of categories">
+          <button (click)="onCategorySelected(category)">{{ category }}</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div *ngIf="selectedCategory">
+    <h2>{{ selectedCategory }}</h2>
+    <div *ngFor="let product of products">
+    </div>
+  </div>
+
+  <span style="margin-left: 20px;"></span>
+  <!-- <h2>Products</h2> -->
+
+  <div *ngFor="let product of products ">
+    <button (click)="removeProduct(product)" >Удалить</button>
+    <h3>
+      <a [title]="product.name + ' details'" [href] = product.link >
+        {{ product.name }}
+      </a>
+    </h3>
+
+    <img [src]="product.currentImage" class="current-image" *ngIf="product.currentImage" height="300px">
+
+    <div class="gallery">
+      <img *ngFor="let imageUrl of product.imageUrl"
+           [src]="imageUrl"
+           [class.active]="imageUrl === product.currentImage"
+           (click)="setCurrentImage(product, imageUrl)">
+    </div>
+
+    <p *ngIf="product.description">
+      Description: {{ product.description }}
+    </p>
+
+    <p class="rating" *ngIf="product.rating">
+      Rating: {{ product.rating }}
+    </p>
+
+    <button type="button" (click)="shareOnWhatsApp(product.link)">
+      Share WhatsApp
+    </button>
+
+    <span style="margin-right: 20px;"></span>
+
+    <button type="button" (click)="shareOnTelegram(product.link)">
+      Share Telegram
+    </button>
+
+    <button (click)="removeProduct(product)">Удалить</button>
+
+    <p>Likes: {{ product.likes }}</p> <!-- Display likes count -->
+    <button (click)="likeProduct(product)">Like</button>
+
+    <app-product-alerts
+      [product]="product"
+      (notify)="onNotify()">
+    </app-product-alerts>
+
+  </div>
+</div>
