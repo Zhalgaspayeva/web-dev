@@ -8,10 +8,8 @@ import { products } from '../products';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent {
-  categories = ['Смартфоны', 'Часы', 'Ноутбуки', 'Аксессуары'];
-  selectedCategory: string | null = null;
   products = [...products];
-  showCategories: boolean = false;
+  selectedCategory: String = "Все";
 
   setCurrentImage(product: Product, imageUrl: string): void {
     product.currentImage = imageUrl;
@@ -31,25 +29,23 @@ export class ProductListComponent {
     window.alert('You will be notified when the product goes on sale');
   }
 
-  toggleCategories() {
-    this.showCategories = !this.showCategories;
-  }
-
-  onCategorySelected(category: string) {
-    this.selectedCategory = category;
-    this.showCategories = false; // Скрыть категории после выбора категории
-    this.products = this.getProductsByCategory(category);
-  }
-
-  getProductsByCategory(category: string): Product[] {
-    return this.products.filter(product => product.category === category);
-  }
-
   removeProduct(product: Product): void {
     this.products = this.products.filter(p => p !== product);
   }
 
   likeProduct(product: Product): void {
     product.likes++; // Increase likes count
+  }
+
+  onCategorySelected(category: String) {
+    this.selectedCategory = category
+    console.log(category)
+  }
+
+  isCategorySuitable(product: Product) {
+    if (this.selectedCategory == "Все"){
+      return true
+    }
+    return this.selectedCategory == product.category
   }
 }

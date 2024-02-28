@@ -1,22 +1,8 @@
+<app-filter (categorySelected)="onCategorySelected($event)"></app-filter>
 <div class="container">
-  <div>
-    <button (click)="toggleCategories()" style="font-size: 20px">Выберите категорию</button>
-    <div *ngIf="showCategories">
-      <h2>Категории</h2>
-      <ul>
-        <li *ngFor="let category of categories">
-          <button (click)="onCategorySelected(category)">{{ category }}</button>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <div *ngIf="selectedCategory">
-    <h2>{{ selectedCategory }}</h2>
-  </div>
-
   <div class="product-list-container">
     <div *ngFor="let product of products" class="product-card">
+      <div *ngIf="isCategorySuitable(product)">
       <button (click)="removeProduct(product)" >Удалить</button>
       <h3>
         <a [title]="product.name + ' details'" [href] = product.link >
@@ -60,5 +46,6 @@
       </app-product-alerts>
 
     </div>
+      </div>
   </div>
 </div>
