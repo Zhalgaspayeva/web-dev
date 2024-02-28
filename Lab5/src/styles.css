@@ -87,8 +87,8 @@ label {
   background-color: #1976d2;
   color: white;
   border: none;
-  margin-bottom: 16px;
-  margin-top: 16px;
+  margin-bottom: 5px;
+  margin-top: 5px;
 }
 
 .button:hover, button:hover {
@@ -167,7 +167,15 @@ app-top-bar h1 {
   margin-top: 10px;
 }
 
+.product-list-container {
+  margin-left: 16px;
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+}
 
+.product-card {
+  margin-bottom: 20px; /* Add spacing between product cards */
+}
 
 /*
 Copyright Google LLC. All Rights Reserved.
