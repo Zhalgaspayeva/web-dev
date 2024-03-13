@@ -1,0 +1,7 @@
+<a style="display: flex; flex-direction: column; align-items: center; margin-top: 20px;">
+  <div *ngFor="let album of albums" style="margin-top: 5px">
+    <span (click)="removeById(album.id)">X</span>
+    <a [routerLink]="['/albums', album.id]" style="margin-right: 20px">{{album.title}}</a>
+  </div>
+</a>
+

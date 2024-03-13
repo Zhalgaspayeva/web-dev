@@ -1,0 +1,12 @@
+<div style="display: flex; flex-direction: column; align-items: center; margin-top: 20px;">
+  <h2 style="font-size: 30px">Album Detail</h2>
+  <div>
+    <p style="margin-top: 10px;"><strong>Title:</strong> {{ album.title }}</p>
+    <input type="text" [(ngModel)]="titleToChange" placeholder="Enter new title" style="margin-top: 7px; font-size: 20px; align-items: center;">
+    <button (click)="saveTitle()" style="margin-left: 20px; font-size: 20px; align-items: center;">Save</button>
+  </div>
+  <div style="margin-top: 5px; font-size: 20px">
+    <a [routerLink] ="['/albums', album.id, 'photos']" >photos</a>
+    <button [routerLink]="['/albums']" style="margin-left: 10px; font-size: 20px; margin-top: 5px">Return back</button>
+  </div>
+</div>

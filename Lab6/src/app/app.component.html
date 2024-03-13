@@ -1,0 +1,13 @@
+<header>
+  <h1 routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">Albums App</h1>
+</header>
+
+<nav>
+  <ul class = "navigation-buttons">
+    <li routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page"><a>Home</a></li>
+    <li routerLink="/about" routerLinkActive="active" ariaCurrentWhenActive="page">About</li>
+    <li routerLink="/albums" routerLinkActive="active" ariaCurrentWhenActive="page">Albums</li>
+  </ul>
+</nav>
+<!-- The routed views render in the <router-outlet>-->
+<router-outlet></router-outlet>
