@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  justify-content: center; /* Центрирование по горизонтали */
+  align-items: center; /* Центрирование по вертикали */
+}
+
+.a {
+  margin-right: 10px;
+}
+
+.company {
+  border: 1px solid black;
+  padding: 20px;
+  font-size: 40px;
+}
+
+.company:hover {
+  background-color: lightgray;
+  font-weight: bolder;
+}

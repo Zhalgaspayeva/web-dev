@@ -1,0 +1,7 @@
+<div class="container">
+  <div *ngFor="let company of companies" class="a">
+    <div class="company" [routerLink]="['/home', company.id]">
+      <p>{{ company?.name }}</p>
+    </div>
+  </div>
+</div>
